@@ -3,9 +3,9 @@
 El proyecto fue desarrollado con Angular 8.2, utilizando Angular Material
 
 Consta de 3 módulos:
-Principal
-Admin
-Compartido
+  + Principal
+  + Admin
+  + Compartido
 
 Principal.-
 Se utilizó Angular Material para la UI
