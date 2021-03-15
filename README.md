@@ -22,8 +22,8 @@ La comunicación  se maneja a través de Observables y la respuesta por medio de
 Se agrego una barra de búsqueda, para mostrar el uso de Pipes, por medio de un “Filter”
 
 Para instalarlo en un servidor local:
-Clonar el repositorio en la computadora
-Instalar todas las dependencias, con node:  npm install
++ Clonar el repositorio en la computadora
++ Instalar todas las dependencias, con node:  npm install
 
 
 PRUEBA EN VIVO:
