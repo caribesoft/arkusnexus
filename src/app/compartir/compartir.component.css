@@ -1,0 +1,27 @@
+
+li {
+font-size: 14px;
+font-family: initial;	
+}
+
+.taca {
+	width: 80%;
+	margin-left: 100px;
+	
+}
+.taca tr {
+	border-bottom: 1px solid #444;
+}
+
+.center {
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.parra {
+	font-size: 14px;
+	font-family: initial;	
+	width:90%;
+	text-align: left;
+}

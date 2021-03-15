@@ -1,0 +1,55 @@
+<h5>COMPARTIR</h5>
+  <div class="example-button-row">
+  <button mat-raised-button color="accent" (click)="getData()" >ESTADOS</button>
+  <button mat-raised-button color="accent" (click)="getUsers()">USERS</button>
+ </div>
+ <hr>
+ <div class="container">
+ 	<div *ngIf="muestraEdos">
+ 		    <div class="parra">
+ 		    	Ejemplo de utilización de httpclient para conexión con EndPoint.<br>
+ 		    	Uso de Observable y Subscribe. <br>
+ 		    	Uso de Pipe: Filter, para búsqueda.
+ 		    </div>
+    		<mat-form-field class="example-full-width center">
+			    <mat-label>Buscar</mat-label>
+			    <input matInput placeholder="buscar..." [(ngModel)]="term">
+			  </mat-form-field>
+
+ 			<table mat-table class="mat-elevation-z8 taca">
+			  <ng-container matColumnDef="position">
+			  	<tr>
+			  	<th mat-header-cell> #</th>
+			    <th mat-header-cell> Nombre</th>
+				</tr>
+			    <tr mat-row *ngFor="let item of postList | filter: term">
+			    <td mat-cell> {{item.regis}} </td>
+			    <td mat-cell> {{item.nombre}} </td>
+				</tr>
+			  </ng-container>
+			</table> 
+ 	</div>
+ 	<div *ngIf="muestraUsers">
+ 		<div class="parra">
+ 		    	Ejemplo de utilización de httpclient para conexión con EndPoint.<br>
+ 		    	Uso de Observable y Subscribe. <br>
+ 		    	Uso de Pipe: Filter, para búsqueda.
+ 		    </div>
+    		<mat-form-field class="example-full-width center">
+			    <mat-label>Buscar</mat-label>
+			    <input matInput placeholder="buscar..." [(ngModel)]="term">
+			  </mat-form-field>
+ 			<table mat-table class="mat-elevation-z8 taca">
+			  <ng-container matColumnDef="position">
+			  	<tr>
+			  	<th mat-header-cell>Nombre</th>
+			    <th mat-header-cell>Ciudad</th>
+				</tr>
+			    <tr mat-row *ngFor="let item of postList | filter: term ">
+			    <td mat-cell> {{item.name}} </td>
+			    <td mat-cell> {{item.city}} </td>
+				</tr>
+			  </ng-container>
+			</table> 
+ 	</div>
+ </div>	

@@ -1,0 +1,27 @@
+<div class="content">
+	<div class="main" *ngIf="!user">
+		<form [formGroup]="loginForm"  (ngSubmit)="signIn()" novalidate>
+		<h5>INICIAR SESIÓN</h5>
+		<mat-form-field class="example-full-width">
+    		<mat-label>Correo Electrónico</mat-label>
+   			 <input type="email" matInput formControlName="email">
+   			 <div *ngIf="email.touched && email.invalid" class="alert">
+   			 	Ingresa un email válido
+   			 </div>
+   		</mat-form-field>	 
+		<br>
+		<mat-form-field class="example-full-width">
+    		<mat-label>Contraseña</mat-label>
+   			 <input type="password" matInput formControlName="password">
+   			 <div *ngIf="password.touched && password.invalid" class="alert">
+   			 	Ingresa mínimo 6 caractéres
+   			 </div>
+   		</mat-form-field><br>	
+   		 <button mat-raised-button color="accent">ENVIAR</button>
+   		 <div *ngIf="errorMessage" class="error">{{errorMessage}}</div>
+	</form>
+</div>	
+<div class="main" *ngIf="user">
+		<h4>Bienvenido a Admin </h4>
+		<button mat-raised-button color="accent" (click)="logOut()">LOG-OUT</button>
+</div>	
